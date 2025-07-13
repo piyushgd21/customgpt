@@ -1,10 +1,12 @@
-# 🧠 Custom Character-Level GPT on Case Files
+# Custom Character-Level GPT on Case Files
 
 This project implements a **lightweight GPT-style language model** trained from scratch on intelligence-related case files. The model generates predictions such as:
 
 > The next bombing location might be...
 
 Built entirely in PyTorch, this model captures domain-specific patterns using a compact, character-level transformer.
+
+<img width="1436" height="342" alt="image" src="https://github.com/user-attachments/assets/2d919e09-b634-4f8a-85ac-9e1c53764fbd" />
 
 ---
 
@@ -20,28 +22,11 @@ Built entirely in PyTorch, this model captures domain-specific patterns using a 
 
 ## 📁 Directory Structure
 
-
-data/
-└── casefiles/
-├── input.txt         # Combined case file input
-├── train.bin         # Training token IDs
-├── val.bin           # Validation token IDs
-└── meta.pkl          # Vocabulary mappings
-
-config/
-└── train\_casefiles\_char.py  # Training configuration
-
-out-casefiles-char/
-└── ckpt.pt              # Model checkpoint (auto-generated)
-
+<img width="459" height="248" alt="image" src="https://github.com/user-attachments/assets/7ca33b80-3ef6-4ebd-a037-413d4e78fa38" />
 
 ## ⚙️ Setup
 
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/custom-gpt-casefiles.git
-cd custom-gpt-casefiles
-
 # Install dependencies
 pip install torch numpy tiktoken
 ````
@@ -64,7 +49,7 @@ python data/shakespeare_char/prepare.py
 
 ---
 
-## 🏋️ Step 2: Train the Model
+## Step 2: Train the Model
 
 Ensure your training config is set in `config/train_casefiles_char.py`, then run:
 
@@ -76,7 +61,7 @@ Training will save checkpoints to `out-casefiles-char/`.
 
 ---
 
-## 🔮 Step 3: Generate Predictions
+## Step 3: Generate Predictions
 
 ```bash
 python sample.py \
@@ -91,7 +76,7 @@ You’ll see multiple plausible paragraph completions based on your domain.
 
 ---
 
-## 🧠 Architecture Summary
+## Architecture Summary
 
 * Character-level transformer
 * Positional embeddings + token embeddings
@@ -101,7 +86,7 @@ You’ll see multiple plausible paragraph completions based on your domain.
 
 ---
 
-## 📦 Technologies Used
+## Technologies Used
 
 * Python
 * PyTorch
